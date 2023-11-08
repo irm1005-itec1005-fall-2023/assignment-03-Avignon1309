@@ -49,19 +49,27 @@
 // It should accept a string as a parameter (text of the todo item)
 // and it should add a new todo item to the todoItems array
 // the function does not need to return anything
+
+
+
+
 let todoItems = [];
 
+function createTodoItem(length) {
+  for (let i = 0; i < length; i++) {
+    todoItems.push({ id: i + 1});
+  }
+}
 
 
 function addToDoItem(text) {
 
   // Implement the logic to add a task here
 
- todoItems.push(text = {
-  id: 0,
-  text: "This is a todo item",
-  completed: false,
- }) ; 
+  const nextId = todoItems.length + 1;
+  todoItems.push({ id: nextId, text: "Ja", completed: false });
+  
+
 
  // Remove this line when you start working on the function
 }
@@ -75,9 +83,12 @@ function addToDoItem(text) {
 // the function does not need to return anything
 
 
+
+
 function removeToDoItem(todoId) {
   // Implement the logic to add a task here
-
+ 
+  
 
   for (let i = 0; i < todoItems.length; i++) {
     if (todoItems[i].id === todoId ) {
@@ -112,6 +123,10 @@ function markToDoItemAsCompleted(todoId) {
 // that matches the id passed to the function, remove it from the array
 // the function does not need to return anything, though you can return
 // true or false depending on whether the item was successfully deleted
+
+
+
+
 function deleteToDoItem(todoId) {
   // Implement the logic to remove a task here
 
