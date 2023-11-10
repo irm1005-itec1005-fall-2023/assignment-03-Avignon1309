@@ -55,19 +55,16 @@
 
 let todoItems = [];
 
-function createTodoItem(length) {
-  for (let i = 0; i < length; i++) {
-    todoItems.push({ id: i + 1});
-  }
-}
+let counter = 0;
 
 
 function addToDoItem(text) {
 
   // Implement the logic to add a task here
 
-  const nextId = todoItems.length + 1;
-  todoItems.push({ id: nextId, text: "Ja", completed: false });
+  counter++;
+
+  todoItems.push({ id: counter, text: "Ja", completed: false });
   
 
 
